@@ -10,16 +10,13 @@
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9.8.6",
-    "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "firebase": "^8.2.6",
-    "marked": "^1.2.9",
+    "marked": "^1.2.8",
     "postcss": "^7.0.35",
     "postcss-import": "^14.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vue-router": "^4.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
