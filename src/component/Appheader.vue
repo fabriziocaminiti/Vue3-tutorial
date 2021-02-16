@@ -7,7 +7,7 @@
       :to="item.to"
     >{{item.title}}</router-link>
     <button v-if="isloggedIn" class="mix-2 text-white" @click="logout">Logout</button>
-    <button v-else class="mix-2 mr-3 text-white" @click="$emit('open-login')">Login</button>
+    <button v-else class="mix-2 mr-3 text-white" @click="openLogin">Login</button>
   </nav>
 </template>
 <script>
@@ -43,6 +43,9 @@ export default {
         .catch(e => {
           e;
         });
+    },
+    openLogin() {
+      this.$store.commit("setLogin", true);
     }
   }
 };

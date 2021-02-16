@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Appheader @open-login="isLoginOpen=true" />
+    <Appheader />
     <router-view></router-view>
     <teleport to="body">
-      <Login v-if="isLoginOpen" @close-login="isLoginOpen=false" />
+      <Login />
     </teleport>
   </div>
 </template>
@@ -15,11 +15,6 @@ import Login from "./component/Login";
 import firebase from "./utilities/firebase";
 
 export default {
-  data() {
-    return {
-      isLoginOpen: false
-    };
-  },
   mounted() {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {

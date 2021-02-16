@@ -4,7 +4,8 @@ const store = createStore({
     state() {
         return {
             isloggedIn: false,
-            authUser: {}
+            authUser: {},
+            isLoginOpen: false,
         };
     },
     mutations: {
@@ -13,6 +14,9 @@ const store = createStore({
         },
         setAuthUser(state, payload) {
             state.authUser = payload;
+        },
+        setLogin(state, payload) {
+            state.isLoginOpen = payload;
         }
     }
 });
