@@ -18,7 +18,6 @@ export default {
       list: [
         { title: "Pezzoti", to: "/Villoti" },
         { title: "Calendar", to: "/Calendar" },
-        { title: "Home", to: "/" },
         { title: "Markdown", to: "/Markdown" },
         { title: "Slider", to: "/Slider" },
         { title: "Calculator", to: "/Calculator" },
