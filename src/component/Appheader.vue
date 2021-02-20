@@ -23,7 +23,9 @@ export default {
         { title: "Slider", to: "/Slider" },
         { title: "Calculator", to: "/Calculator" },
         { title: "ReusableModal", to: "/ReusableModal" },
-        { title: "Chat", to: "/Chat" }
+        { title: "Chat", to: "/Chat" },
+        { title: "UserCrud", to: "UserCrud" },
+        { title: "Tensorflow", to: "Tensorflow" }
       ]
     };
   },

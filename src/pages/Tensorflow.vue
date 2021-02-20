@@ -1,0 +1,52 @@
+<template>
+  <div>
+    <section class="flex w-full">
+      <div class="m-auto">
+        <h1 class="text 2xl my-4">Tensorflow Object Detention</h1>
+        <div class="flex flex-wrap justify-center">
+          <img
+            ref="imgRef"
+            src="https://images.unsplash.com/photo-1528795259021-d8c86e14354c"
+            width="200"
+            crossorigin="anonymous"
+          />
+          <div class="w-full text-center my-4">
+            <button @click="detect" class="w-32 rounded bg-yellow-400">
+              <span v-if="isLoading">Loading ...</span>
+              <span v-else>Detect Object</span>
+            </button>
+            <div v-if="result.length > 0">
+              <p>{{result[0].class}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+import { ref } from "vue";
+require("@tensorflow/tfjs-backend-cpu");
+require("@tensorflow/tfjs-backend-webgl");
+const cocoSsd = require("@tensorflow-models/coco-ssd");
+export default {
+  setup() {
+    const imgRef = ref("");
+    const isLoading = ref(false);
+    const result = ref([]);
+    async function detect() {
+      const img = imgRef.value;
+      isLoading.value = true;
+      const model = await cocoSsd.load();
+      const predictions = await model.detect(img);
+      result.value = predictions;
+      isLoading.value = false;
+    }
+    return { imgRef, result, detect, isLoading };
+  }
+};
+</script>
+
+<style>
+</style>

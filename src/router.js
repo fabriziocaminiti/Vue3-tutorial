@@ -9,19 +9,24 @@ import ReusableModal from './pages/ReusableModal';
 import Modal from './components/Modal';
 import Chat from './pages/Chat';
 import store from './store/index';
+import UserCrud from './pages/UserCrud';
+import Tensorflow from './pages/Tensorflow';
 const routes = [
     { path: '/Villoti', component: Villoti },
     { path: '/Calendar', component: Calendar },
     { path: '/', component: Chiara },
     { path: '/Markdown', component: Markdown },
     { path: '/Slider', component: Slider },
+    { path: '/Tensorflow', component: Tensorflow },
     { path: '/Calculator', component: Calculator, meta: { middleware: "auth" } },
     { path: '/ReusableModal', component: ReusableModal },
     { path: '/Modal', component: Modal },
+    { path: '/UserCrud', component: UserCrud },
     {
         path: '/Chat', component: Chat,
         meta: { middlware: 'auth' },
-    }
+    },
+
 ]
 
 const router = createRouter({ history: createWebHistory(), routes });
