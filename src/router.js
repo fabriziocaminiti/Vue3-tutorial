@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Villoti from './pages/Villoti';
 import Calendar from './pages/Calendar';
-import Chiara from './pages/Chiara';
+import Home from './pages/Home';
 import Markdown from './pages/Markdown';
 import Slider from './pages/Slider';
 import Calculator from './pages/Calculator';
@@ -14,7 +14,7 @@ import Tensorflow from './pages/Tensorflow';
 const routes = [
     { path: '/Villoti', component: Villoti },
     { path: '/Calendar', component: Calendar },
-    { path: '/', component: Chiara },
+    { path: '/', component: Home },
     { path: '/Markdown', component: Markdown },
     { path: '/Slider', component: Slider },
     { path: '/Tensorflow', component: Tensorflow },
